@@ -1,11 +1,11 @@
 {
-  "name": "typo-js",
+  "name": "@rayzr/typo-js",
   "version": "1.0.3",
   "description": "A Hunspell-style spellchecker.",
   "main": "typo.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/cfinke/Typo.js.git"
+    "url": "git://github.com/Rayzr522/typo-js.git"
   },
   "keywords": [
     "spellcheck",
@@ -14,12 +14,12 @@
     "typo",
     "speling"
   ],
-  "author": "Christopher Finke <cfinke@gmail.com> (http://www.chrisfinke.com/)",
+  "author": "Christopher Finke <cfinke@gmail.com> (http://www.chrisfinke.com/), Peter Blood <rayzr522@gmail.com>",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/cfinke/Typo.js/issues"
+    "url": "https://github.com/Rayzr522/typo-js/issues"
   },
-  "homepage": "https://github.com/cfinke/Typo.js#readme",
+  "homepage": "https://github.com/Rayzr522/typo-js#readme",
   "tonicExample": "var Typo = require('typo-js'); var dictionary = new Typo('en_US'); dictionary.check('mispelled');",
   "browser": {
     "fs": false
