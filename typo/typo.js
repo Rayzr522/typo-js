@@ -741,12 +741,12 @@ var Typo;
             limit = limit || 5;
 
             if (this.memoized.hasOwnProperty(word)) {
-                var memoizedLimit = this.memoized[word]['limit'];
+                var memoizedLimit = this.memoized[word].limit;
 
                 // Only return the cached list if it's big enough or if there weren't enough suggestions
                 // to fill a smaller limit.
-                if (limit <= memoizedLimit || this.memoized[word]['suggestions'].length < memoizedLimit) {
-                    return this.memoized[word]['suggestions'].slice(0, limit);
+                if (limit <= memoizedLimit || this.memoized[word].suggestions.length < memoizedLimit) {
+                    return this.memoized[word].suggestions.slice(0, limit);
                 }
             }
 
@@ -767,27 +767,6 @@ var Typo;
 
             var self = this;
             self.alphabet = "abcdefghijklmnopqrstuvwxyz";
-
-            /*
-        if (!self.alphabet) {
-    // Use the alphabet as implicitly defined by the words in the dictionary.
-            var alphaHash = {};
-
-            for (var i in self.dictionaryTable) {
-                for (var j = 0, _len = i.length; j < _len; j++) {
-                    alphaHash[i[j]] = true;
-                }
-            }
-
-            for (var i in alphaHash) {
-                self.alphabet += i;
-            }
-
-            var alphaArray = self.alphabet.split("");
-            alphaArray.sort();
-            self.alphabet = alphaArray.join("");
-        }
-        */
 
     /**
      * Returns a hash keyed by all of the strings that can be made by making a single edit to the word (or words in) `words`
@@ -854,9 +833,6 @@ var Typo;
                             }
                         }
                     }
-                }
-
-                if (s[1]) {
                     for (j = 0, _jlen = self.alphabet.length; j < _jlen; j++) {
                         _edit = s[0] + self.alphabet[j] + s[1];
 
@@ -959,7 +935,7 @@ var Typo;
                 'limit': limit
             };
 
-            return this.memoized[word]['suggestions'];
+            return this.memoized[word].suggestions;
         }
     };
 })();
